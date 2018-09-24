@@ -239,6 +239,135 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/24/From-MCNN-To-ConvLSTM/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Han Gao">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Han Gao(高涵)">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/24/From-MCNN-To-ConvLSTM/" itemprop="url">From_MCNN_To_ConvLSTM</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-24T16:58:24+08:00">
+                2018-09-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="From-MCNN-to-convLSTM"><a href="#From-MCNN-to-convLSTM" class="headerlink" title="From MCNN to convLSTM"></a>From MCNN to convLSTM</h1><blockquote>
+<p>I have always had a misunderstanding about “multi-scale”, thinking that <code>multi-size</code> is equivalent to <code>multi-sale</code>. Therefore , in my paper, the superpixel neighborhood used for spatial information acquisition should belong to multi-size data rather than multi-scale.  How to effectively use neighborhood information of different size is a breakthrough point.</p>
+</blockquote>
+<ul>
+<li>Current work<br>The principle of the currently used <code>WMCNN</code> (weighted multi-channel cnn) is to input superpixel neighborhoods of different size to obtain spatial information , and obtain weighted fusion features according to the neighborhood range for classification tasks.<br>This is a method to effectively solve the problem of contextual information utilization, which is also easy to implement.  What can be further studied is the use of deeper feature extraction networks(go deeper), such as residual networks. This is one of the current work and those better be done in the end of Oct.</li>
+<li><p>Future work<br>I’m trying to use <code>convLSTM</code>to handle multi-neighbor input problems. LSMT network is suitable for processing time series data. I think of multi-pixel contextual information of superpixels  as a <code>spatial sequence</code>.  When we try to visually interpret the of a superpixel, we first pay attention to its location first and then understanding its scene.  For example, a vegetation superpixel , we first judge the scene in which it is located (forest or grassland), then observing other elements around(such as shadow or  mountain) for further distinguish whether it is a tree or a shrub. There is a sequence in this process. <code>Convlutional LSTM</code>is a network that can process image data. We use spatial sequence instead of  temporal sequence to optimize the final classification results(ideal situation).</p>
+</li>
+<li><p>Conclusion<br>These two parts of work are two kinds of understanding of things , and the innovation points are different. Relatively speaking, the second part of the work is more innovative(if it can be done). So we need to complete the first part of the work as soon as possible.</p>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/18/hangaois-me-is-established-now/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -398,7 +527,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
